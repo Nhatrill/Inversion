@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20220126211028",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "bank",
+  "fields": [
+    {
+      "fieldName": "rut",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankType",
+      "fieldType": "BankType",
+      "fieldValues": "Banco,Chile,Santander,Estado"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Bank entity.",
+  "jpaMetamodelFiltering": false,
+  "name": "Bank",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

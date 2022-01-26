@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="bank">
+      <h2 data-cy="bankDetailsHeading"><span jhiTranslate="inversionApp.bank.detail.title">Bank</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ bank.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.bank.rut">Rut</span></dt>
+        <dd>
+          <span>{{ bank.rut }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.bank.amount">Amount</span></dt>
+        <dd>
+          <span>{{ bank.amount }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.bank.bankType">Bank Type</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'inversionApp.BankType.' + bank.bankType }}">{{ bank.bankType }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.bank.date">Date</span></dt>
+        <dd>
+          <span>{{ bank.date | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/bank', bank.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

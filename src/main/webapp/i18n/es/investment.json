@@ -1,0 +1,27 @@
+{
+  "inversionApp": {
+    "investment": {
+      "home": {
+        "title": "Investments",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Investment",
+        "createOrEditLabel": "Crear o editar Investment",
+        "notFound": "Ningún Investments encontrado"
+      },
+      "created": "Un nuevo Investment ha sido creado con el identificador {{ param }}",
+      "updated": "Un Investment ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Investment ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Investment {{ id }}?"
+      },
+      "detail": {
+        "title": "Investment"
+      },
+      "id": "Id",
+      "rut": "Rut",
+      "startDate": "Start Date",
+      "updateDate": "Update Date",
+      "totalAmount": "Total Amount"
+    }
+  }
+}

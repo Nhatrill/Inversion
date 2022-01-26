@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="investment">
+      <h2 data-cy="investmentDetailsHeading"><span jhiTranslate="inversionApp.investment.detail.title">Investment</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="inversionApp.investment.id">Id</span></dt>
+        <dd>
+          <span>{{ investment.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.investment.rut">Rut</span></dt>
+        <dd>
+          <span>{{ investment.rut }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.investment.startDate">Start Date</span></dt>
+        <dd>
+          <span>{{ investment.startDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.investment.updateDate">Update Date</span></dt>
+        <dd>
+          <span>{{ investment.updateDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="inversionApp.investment.totalAmount">Total Amount</span></dt>
+        <dd>
+          <span>{{ investment.totalAmount }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/investment', investment.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

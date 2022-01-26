@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20220126211027",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "rut",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "initialInvestment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "totalAmount",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productType",
+      "fieldType": "ProductType",
+      "fieldValues": "FFMM,Banco,Chile,Larrain,Vial,Deposito,Plazo,Cuenta,Activa"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "Product entity.",
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

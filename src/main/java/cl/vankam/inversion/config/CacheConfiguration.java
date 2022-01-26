@@ -49,6 +49,9 @@ public class CacheConfiguration {
             createCache(cm, cl.vankam.inversion.domain.User.class.getName());
             createCache(cm, cl.vankam.inversion.domain.Authority.class.getName());
             createCache(cm, cl.vankam.inversion.domain.User.class.getName() + ".authorities");
+            createCache(cm, cl.vankam.inversion.domain.Product.class.getName());
+            createCache(cm, cl.vankam.inversion.domain.Bank.class.getName());
+            createCache(cm, cl.vankam.inversion.domain.Investment.class.getName());
             // jhipster-needle-caffeine-add-entry
         };
     }

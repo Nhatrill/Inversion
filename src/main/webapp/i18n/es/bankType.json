@@ -1,0 +1,11 @@
+{
+  "inversionApp": {
+    "BankType": {
+      "null": "",
+      "Banco": "Banco",
+      "Chile": "Chile",
+      "Santander": "Santander",
+      "Estado": "Estado"
+    }
+  }
+}
