@@ -1,0 +1,62 @@
+/**
+ * Product entity.
+ */
+entity Product {
+	rut String,
+	initialInvestment String,
+    totalAmount String,
+    productType ProductType,
+    date Instant,
+}
+
+/**
+ * Bank entity.
+ */
+entity Bank {
+	rut String,
+	amount String,
+	BankType BankType,
+    date Instant
+}
+
+/**
+ * The User entity.
+ */
+entity User {
+	rut String,
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String
+}
+/**
+ * The Investment entity.
+ */
+entity Investment {
+  	id UUID,
+    rut String,
+	startDate Instant,
+	updateDate Instant,
+	totalAmount String
+}
+
+enum BankType {
+    Banco Chile, Banco Santander, Banco Estado
+}
+
+enum ProductType  {
+    FFMM Banco Chile, FFMM Larrain Vial, Deposito Plazo Banco Chile, Cuenta Activa Larrain Vial
+}
+
+
+// Set pagination options
+paginate Product, Investment with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except ProductType, BankType
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
